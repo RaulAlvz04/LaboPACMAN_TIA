@@ -141,8 +141,8 @@ def getLayout(name, back=2):
         layout = tryToLoad('layouts/' + name + '.lay')
         if layout is None: layout = tryToLoad(name + '.lay')
     if layout is None and back >= 0:
-        curdir = os.path.abspath('../../OneDrive/Documentos/Labo_1eGela')
-        os.chdir('../../OneDrive/Documentos')
+        curdir = os.path.abspath('.')
+        os.chdir('..')
         layout = getLayout(name, back - 1)
         os.chdir(curdir)
     return layout
